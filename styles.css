@@ -1,0 +1,41 @@
+body{
+  background-color:#3748AC;
+}
+form input {
+  height: 40px;
+  width: 500px;
+  background-color: lightblue;
+  width:99%;
+}
+
+#item {
+  font-size: 25px;
+}
+
+#submit{
+  border-radius:50%;
+  height:10%;
+  width:10%;
+  background-color:#E51C59;
+  border:none;
+}
+
+#item{
+  background-color:white;
+  border:1px solid grey;
+}
+
+.todo_container{
+  padding:2px;
+}
+
+.todo_header{
+  padding:5%;
+  background-color:#E6E7F3;
+  border-radius:5px 5px 0 0;
+}
+
+.todo_day{
+  color:#3748AC;
+  font-size:25px;
+}
