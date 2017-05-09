@@ -1,6 +1,7 @@
 body{
   background-color:#3748AC;
   margin:0;
+  padding-bottom:130px;
 }
 
 .todrop_header{
@@ -18,19 +19,24 @@ body{
 .todrop_header_left{
   font-size:20px;
   width:64%;
-  padding-left:2% 
+  padding-left:2%
 }
 
 .todrop_header_right{
-  width:28%;
+  width:30%;
 }
 
 .todrop_login, .todrop_sign_up{
-  width:48%;
+  /*width:48%;*/
+}
+
+.todrop_login{
+  text-align:right;
 }
 
 .todrop_sign_up{
-  margin-left:10%:
+  text-align:left;
+  margin-left:10px;
 }
 
 .todrop_login:hover, .todrop_sign_up:hover{
@@ -69,7 +75,6 @@ body{
 
 #task_entry_input, .task_input{
   height: 40px;
-  margin-left: -2px;
   background-color: white;
   border: none;
   box-sizing: border-box;
@@ -146,4 +151,8 @@ input:focus {
 .task_time{
   width:8%;
   border:none;
+}
+
+.todo_bottom_container{
+  background-color:orange;
 }
