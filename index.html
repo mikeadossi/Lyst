@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
+    <title></title>
+  </head>
+  <body>
+  <div class="todrop_header">
+    <div class="todrop_header_left">ToDrop</div>
+    <div class="todrop_header_right">
+      <div class="todrop_login">log in</div>
+      <div class="todrop_sign_up">sign up</div>
+    </div>
+  </div>
+  <div id="todo_container">
+    <div class="todo_header">
+      <div class="todo_date_container">
+        <div class="todo_day">Monday, 4th</div>
+        <div class="todo_month">january</div>
+      </div>
+      <div class="todo_header_tasks_container">
+        <div class="todo_num_of_tasks">6</div>
+        <div class="todo_pending">tasks pending</div>
+      </div>
+    </div>
+    <div class="todo_tasks_container">
+      <form class="form" action="index.html" method="post">
+      <div class="task_input_container"><div class="task_checkbox_container"><input type="checkbox"></div><input class="task_input" type="text" name="item" value="" placeholder="sleep"><input class="task_time" placeholder="12g:00"></div>
+      <div class="task_input_container"><div class="task_checkbox_container"><input type="checkbox"></div><input class="task_input" type="text" name="item" value="" placeholder="meditate"><input class="task_time" placeholder="7:00"></div>
+      <div class="task_input_container"><div class="task_checkbox_container"><input type="checkbox"></div><input class="task_input" type="text" name="item" value="" placeholder="run"><input class="task_time" placeholder="7:00"></div>
+      <input id="task_entry_input" type="text" name="item" value="" placeholder="groceries">
+      <div id="submit_btn_container">
+        <input id="submit_btn" type="submit" name="add_item" value="+">
+      </div>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>
