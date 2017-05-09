@@ -1,5 +1,5 @@
 var express = require("express");
-var router = express.router();
+var router = express.Router();
 var Queries = require("../database/queries.js");
 
 router.get('/', function(req, res, next) {
@@ -12,5 +12,6 @@ router.get('/', function(req, res, next) {
 })
 
 //Other routes will go here
+
 
 module.exports = router
