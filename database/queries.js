@@ -5,8 +5,11 @@ var db = pgp(`postgres://${process.env.USER}@localhost:5432/todos`)
 var Queries = {
   getAll: function() {
     return db.any('SELECT * FROM todos')
+  },
+  addTask: function(task) {
+    return db.any('INSERT INTO todos(task) VALUES ($1)',[task])
   }
-  //add other queries
+
 }
 
 module.exports = Queries;
