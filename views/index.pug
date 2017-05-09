@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='../public/stylesheets/styles.css')
+    title
+  body
+    #todo_container
+      .todo_header
+        .todo_date_container
+          .todo_day Monday, 4th
+          .todo_month january
+        .todo_header_tasks_container
+          .todo_num_of_tasks 6
+          .todo_pending tasks pending
+      .todo_tasks_container
+        form.form(action='index.html', method='post')
+          .task_input_container
+            .task_checkbox_container
+              input(type='checkbox')
+            input.task_input(type='text', name='item', value='', placeholder='sleep')
+            input.task_time(placeholder='12:00')
+          .task_input_container
+            .task_checkbox_container
+              input(type='checkbox')
+            input.task_input(type='text', name='item', value='', placeholder='meditate')
+            input.task_time(placeholder='7:00')
+          .task_input_container
+            .task_checkbox_container
+              input(type='checkbox')
+            input.task_input(type='text', name='item', value='', placeholder='run')
+            input.task_time(placeholder='7:00')
+          input#task_entry_input(type='text', name='item', value='', placeholder='groceries')
+          #submit_btn_container
+            input#submit_btn(type='submit', name='add_item', value='+')
