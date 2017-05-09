@@ -1,0 +1,42 @@
+{
+  "name": "todrop",
+  "version": "1.0.0",
+  "description": "a to do list app that gives you freedom",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "npm start",
+    "create:db": "createdb todos",
+    "reset:db": "psql -d todos -f database/schema.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmwarter/ToDrop.git"
+  },
+  "keywords": [
+    "drag",
+    "and",
+    "drop",
+    "to",
+    "do",
+    "list",
+    "app"
+  ],
+  "author": "Mike A, Keith W",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmwarter/ToDrop/issues"
+  },
+  "homepage": "https://github.com/kmwarter/ToDrop#readme",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "nodemon": "*",
+    "pg": "*",
+    "pg-promise": "*",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0"
+  }
+}
