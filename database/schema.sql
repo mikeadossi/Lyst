@@ -4,6 +4,8 @@ DROP TABLE IF EXISTS todos;
   CREATE TABLE todos (
     id SERIAL PRIMARY KEY,
     task VARCHAR(255) NOT NULL,
-    now TIMESTAMP DEFAULT current_time,
+    currentTime TIMESTAMP DEFAULT now(),
     isComplete BOOLEAN DEFAULT FALSE
   );
+
+INSERT INTO todos (id,task,isComplete) VALUES (1, 'run', true);
