@@ -1,6 +1,47 @@
 body{
   background-color:#3748AC;
-  padding-top:7%;
+  margin:0;
+}
+
+.todrop_header{
+  background-color:rgb(40,46,159);
+  position:fixed;
+  width:100%;
+  padding:15px;
+  color:white;
+}
+
+.todrop_header_left, .todrop_header_right, .todrop_login, .todrop_sign_up{
+  display:inline-block;
+}
+
+.todrop_header_left{
+  font-size:20px;
+  width:64%;
+  padding-left:2% 
+}
+
+.todrop_header_right{
+  width:28%;
+}
+
+.todrop_login, .todrop_sign_up{
+  width:48%;
+}
+
+.todrop_sign_up{
+  margin-left:10%:
+}
+
+.todrop_login:hover, .todrop_sign_up:hover{
+  color:#E51C59;
+  cursor:pointer;
+}
+
+#todo_container{
+  padding-top:100px;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 #item_input {
@@ -104,5 +145,5 @@ input:focus {
 
 .task_time{
   width:8%;
-  border:none; 
+  border:none;
 }
