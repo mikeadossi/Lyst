@@ -54,17 +54,27 @@ body{
   font-size: 25px;
 }
 
-#submit_btn{
+#submit_btn, #delete_btn{
   border-radius:50%;
   height:55px;
   width:55px;
-  background-color:#E51C59;
   border:none;
   color:white;
 }
 
-#submit_btn:hover{
+#submit_btn{
+  background-color:#E51C59;
+  margin-right:2%;
+}
+
+#delete_btn{
+  background-color:limegreen;
+  text-align: center;
+}
+
+#submit_btn:hover, #delete_btn:hover{
   cursor:pointer;
+  opacity:0.9;
 }
 
 #submit_btn_container{

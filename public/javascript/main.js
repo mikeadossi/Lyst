@@ -29,4 +29,12 @@
       }
 
     })
+
+    document.getElementById('delete_btn').addEventListener('click',
+      function(){
+        let deleteTask = "/delete-task"
+        let options = { method:'POST' }
+        fetch( deleteTask, options );
+      })
+
 })();

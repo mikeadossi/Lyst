@@ -34,6 +34,7 @@ router.post('/checked', function(req, res, next) {
 router.post('/unchecked', function(req, res, next) {
     let id = req.body.id;
     Queries.toggleFalse(id).then(function(projects) {
+      console.log('================>    unchecked redirect!')
       Queries.getAll().then(function(projects) {
         res.redirect('/')
       })
@@ -42,6 +43,13 @@ router.post('/unchecked', function(req, res, next) {
 })
 
 router.post('/delete-task', function(req, res, next) {
+  Queries.deleteTask().then(function(projects) {
+    console.log('================>    delete redirect!')
+    Queries.getAll().then(function(projects) {
+      res.redirect('/')
+    })
+  })
+
 })
 
 //Other routes will go here
