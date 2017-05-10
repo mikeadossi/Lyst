@@ -13,7 +13,7 @@ app.set("view engine", "pug");
 
 //
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", server);

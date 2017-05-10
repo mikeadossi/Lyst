@@ -13,11 +13,10 @@ router.get('/', function(req, res, next) {
 
 router.post('/insert-task', function(req, res, next) {
   Queries.addTask(req.body.user_entry).then(function(projects) {
-    console.log('yyy')
     Queries.getAll().then(function(projects) {
       res.render("index", {
         projects: projects
-      })
+      }) 
     })
   })
 })
