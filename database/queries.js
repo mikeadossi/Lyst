@@ -17,7 +17,8 @@ var Queries = {
   },
   toggleFalse: function(id) {
     return db.none('UPDATE todos SET iscomplete = false WHERE id = $1', [id])
-  }
+  },
+  
 }
 
 module.exports = Queries;
