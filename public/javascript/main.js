@@ -46,7 +46,7 @@
       console.log('==> ',event.path[2])
 
       let id = event.path[2].getElementsByTagName('input')[1].id
-      let task = event.path[2].getElementsByTagName('input')[1]
+      let task = event.path[2].getElementsByTagName('input')[1].value
       let eventr = event.path
       console.log('task => ',task)
       console.log('eventr => ',eventr)
