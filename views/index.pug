@@ -2,7 +2,7 @@ extends layout
 
 block content
   .todrop_header
-    .todrop_header_left ToDrop
+    .todrop_header_left Lyst
     .todrop_header_right
       .todrop_login log in
       .todrop_sign_up sign up
@@ -37,7 +37,7 @@ block content
       input#task_entry_input(type='text', name='user_entry', value='', placeholder='add new task')
       #submit_btn_container
         input#submit_btn(type='submit', name='add_item', value='+')
-        input#deleteMe(type='submit', name='delete_item', value='-')
+        input#delete_btn(type='delete', name='delete_item', value='-')
     
     script(src='javascript/main.js')
     //- script(src='../routes/server.js')
