@@ -12,6 +12,12 @@ var Queries = {
   deleteTask: function(id) {
     return db.none('DELETE from todos WHERE id = $1',[id])
   },
+  toggleTrue: function(id) {
+    return db.none('UPDATE todos SET iscomplete = true WHERE id = $1', [id])
+  },
+  toggleFalse: function(id) {
+    return db.none('UPDATE todos SET iscomplete = false WHERE id = $1', [id])
+  }
   /*
   toggle: function(id) {
     if(radio button = checked) {
