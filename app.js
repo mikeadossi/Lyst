@@ -3,7 +3,8 @@ var path = require("path");
 var favicon = require("serve-favicon");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
-var server = require("./routes/server");
+var routes = require("./routes/routes");
+var morgan = require("morgan");
 
 var app = express();
 
@@ -12,11 +13,12 @@ app.set("views", path.join(__dirname, "views/"));
 app.set("view engine", "pug");
 
 //
+app.use(morgan('dev')); // send messages to cli
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "/public")));
-app.use("/", server);
+app.use(routes);
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next){
@@ -26,7 +28,7 @@ app.use(function(req, res, next){
 })
 
 //Error handler
-app.use(function(err, req, res, next){
+app.use(function(err, req, res){
   //Set locals, only provide error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -37,5 +39,3 @@ app.use(function(err, req, res, next){
 });
 
 app.listen(3000);
-//If needed
-module.exports = app
