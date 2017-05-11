@@ -79,4 +79,25 @@
       }
     })
 
+  var mainDate = new Date()
+
+
+
+   var getDay = function(today) {
+      var dayObj = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      return dayObj[today];
+   }
+   var getMonth = function(today) {
+      var monthObj = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      return monthObj[today];
+   }
+
+   var dayText = getDay(mainDate.getDay());
+   var monthText = getMonth(mainDate.getMonth());
+   var dateText = mainDate.getDate();
+
+   var day = document.getElementById('todo_month');
+   var textNode = document.createTextNode(`${dayText}, ${monthText} ${dateText}th`);
+   day.replaceChild(textNode, day.childNodes[0])
+
 })();

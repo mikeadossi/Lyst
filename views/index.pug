@@ -7,16 +7,15 @@ block content
     .todrop_header_right
       a.todrop_login(href='/login') log in
       a.todrop_sign_up(href='/signup') sign up
-      
+
   #todo_container
     .todo_header
       .todo_date_container
-        .todo_day Monday, 4th
-        .todo_month january
+        #todo_month January, 1st
       .todo_header_tasks_container
         .todo_num_of_tasks 6
         .todo_pending tasks pending
-          
+
     for todos in projects
 
       if todos.iscomplete
@@ -24,22 +23,21 @@ block content
           .task_input_container
             .task_checkbox_container
               input(type='checkbox', id=todos.id)
-            input.task_input(type='text', name='item', value='', placeholder=todos.task) 
+            input.task_input(type='text', name='item', value='', placeholder=todos.task)
             input.task_time(placeholder='12:00')
-      else 
+      else
         .todo_tasks_container
           .task_input_container
             .task_checkbox_container
               input(type='checkbox', id=todos.id)
-            input.task_input(type='text', name='item', value='', placeholder=todos.task, id=todos.id) 
+            input.task_input(type='text', name='item', value='', placeholder=todos.task, id=todos.id)
             input.task_time(placeholder='12:00')
-                
+
     form.form(action='/insert-task', method='post')
       input#task_entry_input(type='text', name='user_entry', value='', placeholder='add new task')
       #submit_btn_container
         input#delete_btn(type='delete', name='delete_item', value='-', readonly="readonly")
         input#submit_btn(type='submit', name='add_item', value='+', readonly="readonly")
-    
+
     script(src='javascript/main.js')
     //- script(src='../routes/server.js')
-    

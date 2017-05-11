@@ -5,7 +5,6 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var routes = require("./routes/routes");
 var morgan = require("morgan");
-
 var app = express();
 
 //view engine setup
@@ -38,4 +37,4 @@ app.use(function(err, req, res){
   res.render("error");
 });
 
-app.listen(3000); 
+app.listen(3000);
