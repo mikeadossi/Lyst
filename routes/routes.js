@@ -12,19 +12,6 @@ router.get('/', function(req, res, next) {
   })
 })
 
-// router.get('/', function(req, res, next) {
-//   let results = {}
-//   Queries.getAll()
-//     .then(function(projects) {
-//       results.projects = projects
-//       return Queries.getCount()
-//     })
-//     .then( function(count) {
-//       results.tasks = count
-//       res.render("index", results)
-//     })
-// })
-
 router.post('/insert-task', function(req, res, next) {
 
     Queries.addTask(req.body.user_entry).then(function(projects) {
