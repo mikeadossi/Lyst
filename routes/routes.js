@@ -4,12 +4,29 @@ var Queries = require("../database/queries.js");
 
 
 router.get('/', function(req, res, next) {
-  Queries.getAll().then(function(projects) {
+  Promise.all([Queries.getAll(), Queries.getCount()]).then(function([projects,tasks]) {
+   console.log("projects========>",projects)
+   console.log("tasks==========>",tasks)
     res.render("index", {
-      projects: projects
+      projects: projects,
+      tasks: tasks
     })
   })
 })
+
+// router.get('/', function(req, res, next) {
+//   let results = {}
+//   Queries.getAll()
+//     .then(function(projects]) {
+//       Object.assign( {}, project, result)
+//       results.projects = projects
+//       return Queries.getCount()
+//     })
+//     .then( function(cont) {
+//       results.count = count
+//       res.render("index", results)
+//     })
+// })
 
 router.post('/insert-task', function(req, res, next) {
 
