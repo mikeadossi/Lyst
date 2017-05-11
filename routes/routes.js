@@ -74,6 +74,10 @@ router.get('/signup', function(req, res, next) {
       res.render('signup.pug')
 })
 
+router.get('/home', function(req, res, next) {
+      res.render('home.pug')
+})
+
 // router.get('/', function(req, res, next) {
 //       res.render('index.pug')
 // })
