@@ -37,7 +37,7 @@
     function(){
       var deleteTask = "/delete-task"
       var options = { method:'POST' }
-      fetch( deleteTask, options );
+      fetch( deleteTask, options ).then( (url) => location.reload() );
     })
 
 
