@@ -6,6 +6,9 @@ var Queries = {
   getAll: function() {
     return db.any('SELECT * FROM todos ORDER BY id ASC')
   },
+  getCount: function() {
+    return db.one('SELECT COUNT(*) FROM todos WHERE iscomplete = false')
+  },
   addTask: function(task) {
     return db.any('INSERT INTO todos(task) VALUES ($1)',[task])
   },

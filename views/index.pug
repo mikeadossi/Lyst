@@ -1,5 +1,6 @@
 extends layout
 
+
 block content
   .todrop_header
     .todrop_header_left
@@ -13,7 +14,7 @@ block content
       .todo_date_container
         #todo_month January, 1st
       .todo_header_tasks_container
-        .todo_num_of_tasks 6
+        .todo_num_of_tasks #{tasks.count}
         .todo_pending tasks pending
 
     for todos in projects
