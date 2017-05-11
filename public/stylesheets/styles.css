@@ -4,6 +4,15 @@ body{
   padding-bottom:130px;
 }
 
+.home:hover{
+  cursor:pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration:none;
+}
+
 .todrop_header{
   background-color:rgb(40,46,159);
   position:fixed;

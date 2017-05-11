@@ -2,10 +2,11 @@ extends layout
 
 block content
   .todrop_header
-    .todrop_header_left Lyst
+    .todrop_header_left
+      a.home(href='/') Lyst
     .todrop_header_right
-      .todrop_login log in
-      .todrop_sign_up sign up
+      a.todrop_login(href='/login') log in
+      a.todrop_sign_up(href='/signup') sign up
   
   #login_container
     .login_header Log In
