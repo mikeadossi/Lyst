@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .todrop_header
+    .todrop_header_left Lyst
+    .todrop_header_right
+      .todrop_login log in
+      .todrop_sign_up sign up
+  
+  #login_container
+    .login_header Log In
+    input.username_login_input(type='text' placeholder='enter username')
+    input.password_login_input(type='text' placeholder='enter password')
+    input.submit_login_info(type='submit' value='submit')
+  
