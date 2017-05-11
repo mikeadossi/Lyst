@@ -69,6 +69,7 @@ a {
   width:55px;
   border:none;
   color:white;
+  opacity:0.9
 }
 
 #submit_btn{
@@ -82,15 +83,20 @@ a {
 }
 
 #submit_btn:hover, #delete_btn:hover{
-  cursor:pointer;
-  opacity:0.9;
+  cursor:pointer; 
+}
+
+#submit_btn:active, #delete_btn:active{
+  opacity:1;
 }
 
 #submit_btn_container{
   display:flex;
   justify-content:flex-end;
   padding:20px;
-  padding: 20px 0 20px 20px;
+  padding: 20px 9px 20px 20px;
+  background-color:white;
+  border-radius: 0 0 5px 5px;
 }
 
 #task_entry_input, .task_input{
