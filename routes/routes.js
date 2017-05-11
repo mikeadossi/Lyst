@@ -66,6 +66,16 @@ router.post('/update-input', function(req, res, next) {
 
 })
 
-//Other routes will go here
+router.get('/login', function(req, res, next) {
+      res.render('login.pug')
+})
+
+router.get('/signup', function(req, res, next) {
+      res.render('signup.pug')
+})
+
+// router.get('/', function(req, res, next) {
+//       res.render('index.pug')
+// })
 
 module.exports = router
