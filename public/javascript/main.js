@@ -4,7 +4,6 @@
   // add task feature
   document.querySelector('#todo_container')
     .addEventListener( 'click', function( event ){
-      console.log('clicked')
       var id = event.path[2].getElementsByTagName('input')[0].id
       id = Number(id);
       var reqBody = { id: id }
@@ -52,21 +51,16 @@
       id = event.path[2].getElementsByTagName('input')[1].id
       task = event.path[2].getElementsByTagName('input')[1].placeholder
       eventr = event.path
-      console.log('task => ',task)
-      console.log('eventr => ',eventr)
-
-      console.log('onfocus task =====> ',task)
 
 
     })
 
     document.querySelector('#todo_container').addEventListener( 'focusout', function(){
-      console.log('oui onblur')
       var value = event.path[2].getElementsByTagName('input')[1].value;
       console.log('onblur value =====> ',value)
-      console.log('task: ',task)
-      if( value !== task ){
-        console.log('1 level in')
+      console.log('Onfocus task same?: ',task)
+      if( value !== task && value !== '' && value !== '-' && value !== '+'){
+        console.log('INSIDE CONDITIONAL')
         id = Number(id);
         var reqBody = { id: id, value: value }
         var options = {
@@ -77,7 +71,6 @@
           }),
           body: JSON.stringify( reqBody )
         }
-        console.log('2 levels in')
 
         var url = "/update-input"
 
