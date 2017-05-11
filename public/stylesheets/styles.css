@@ -93,7 +93,7 @@ body{
 }
 
 .task_input{
-  width: 80%;
+  width: 74%;
   color:black;
 }
 
@@ -167,7 +167,7 @@ input:focus {
 }
 
 .task_time{
-  width:8%;
+  width:10%;
   border:none;
 }
 
