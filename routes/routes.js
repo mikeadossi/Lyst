@@ -43,6 +43,21 @@ router.post('/unchecked', function(req, res, next) {
 
 router.post('/delete-task', function(req, res, next) {
   Queries.deleteTask().then(function(projects) {
+
+    Queries.getAll().then(function(projects) {
+      res.redirect('/')
+    })
+  })
+
+})
+
+router.post('/update-input', function(req, res, next) {
+  let id = req.body.id;
+  let value = req.body.value;
+  console.log('id ###> ',id);
+  console.log('value ###> ',value);
+  Queries.updateInput(id,value).then(function(projects) {
+
     Queries.getAll().then(function(projects) {
       res.send( '/home' )
       res.redirect('/')

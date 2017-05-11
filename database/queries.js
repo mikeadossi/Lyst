@@ -17,7 +17,11 @@ var Queries = {
   },
   toggleFalse: function(id) {
     return db.none('UPDATE todos SET iscomplete = false WHERE id = $1', [id])
+  },
+  updateInput: function(id,value) {
+    return db.none('UPDATE todos SET task = $2 WHERE id = $1', [id,value])
   }
+
 }
 
 module.exports = Queries;
