@@ -12,22 +12,22 @@ body{
   color:white;
 }
 
-.todrop_header_left, .todrop_header_right, .todrop_login, .todrop_sign_up{
+.todrop_header_left, .todrop_login, .todrop_sign_up{
   display:inline-block;
 }
 
 .todrop_header_left{
   font-size:20px;
-  width:64%;
+  width:59%;
   padding-left:2%
 }
 
 .todrop_header_right{
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
   width:30%;
-}
-
-.todrop_login, .todrop_sign_up{
-  /*width:48%;*/
+  padding-right:13px;
 }
 
 .todrop_login{
@@ -79,8 +79,9 @@ body{
 
 #submit_btn_container{
   display:flex;
-  justify-content:flex-end; /* <==================== */
+  justify-content:flex-end;
   padding:20px;
+  padding: 20px 0 20px 20px;
 }
 
 #task_entry_input, .task_input{
@@ -133,14 +134,21 @@ body{
   display:inline-block;
 }
 
+.todo_num_of_tasks{
+  margin-right:2px;
+}
+
 .todo_date_container{
-  width:80%;
+  width:65%;
 }
 
 .todo_header_tasks_container{
-  width: 20%;
+  width: 34%;
   margin-left: -4px;
   margin-top: 15px;
+  display:inline-flex;
+  flex-direction:row;
+  justify-content: flex-end;
 }
 
 .task_checkbox{
@@ -165,4 +173,48 @@ input:focus {
 
 .todo_bottom_container{
   background-color:orange;
+}
+
+.landing_header{
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -63px;
+}
+
+#login_container{
+  padding-top: 120px;
+  text-align:center;
+}
+
+.login_header, .signup_header{
+  font-size:30px;
+  color:white;
+}
+
+.username_login_input, .password_login_input, .username_signup_input, .password_signup_input{
+  text-align: left;
+  width: 36%;
+  display: block;
+  padding: 5px;
+  margin: auto;
+  margin-top: 10px;
+  min-width:200px;
+  max-width:500px;
+}
+
+.submit_login_info, .submit_signup_info{
+  background-color:#E6E7F3;
+  border:none;
+  border-radius:3px;
+  margin-top:10px;
+  width:30%;
+  padding:5px;
+}
+
+.submit_login_info:hover, .submit_signup_info:hover{
+  cursor:pointer;
+  color:#E51C59;
 }
