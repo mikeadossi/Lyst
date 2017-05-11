@@ -63,12 +63,12 @@ body{
 }
 
 #submit_btn{
-  background-color:#E51C59;
-  margin-right:2%;
+  background-color:limegreen;
 }
 
 #delete_btn{
-  background-color:limegreen;
+  background-color:#E51C59;
+  margin-right:2%;
   text-align: center;
 }
 
