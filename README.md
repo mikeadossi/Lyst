@@ -2,6 +2,21 @@
 
 A to do list that gives you that freedom you always wanted.
 
+## Installation
+
+After cloning down the app to your computer navigate to the projects root directory and run the following commands:
+
+```
+  $ npm install
+  $ npm run create:db
+  $ npm run reset:db
+```
+To run the app at any time simply run the following command:
+
+```
+  $ npm start
+```
+
 ## Specifications :
 
  - [x] Users can create to do list items.
