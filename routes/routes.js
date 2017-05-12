@@ -33,7 +33,7 @@ passport.deserializeUser(function(name, callback){
   })
 })
 
-router.get('/', function(req, res, next) {
+router.get('/lyst', function(req, res, next) {
   Promise.all([Queries.getAll(), Queries.getCount()]).then(function([projects,tasks]) {
     res.render("index", {
       projects: projects,
@@ -47,7 +47,7 @@ router.post('/insert-task', function(req, res, next) {
 
     Queries.addTask(req.body.user_entry).then(function(projects) {
       Queries.getAll().then(function(projects) {
-        res.redirect('/')
+        res.redirect('/lyst')
       })
     })
 
@@ -57,7 +57,7 @@ router.post('/checked', function(req, res, next) {
     let id = req.body.id
     Queries.toggleTrue(id).then(function(projects) {
       Queries.getAll().then(function(projects) {
-        res.redirect('/')
+        res.redirect('/lyst')
       })
     })
 
@@ -67,7 +67,7 @@ router.post('/unchecked', function(req, res, next) {
     let id = req.body.id;
     Queries.toggleFalse(id).then(function(projects) {
       Queries.getAll().then(function(projects) {
-        res.redirect('/')
+        res.redirect('/lyst')
       })
     })
 
@@ -77,7 +77,7 @@ router.post('/delete-task', function(req, res, next) {
   Queries.deleteTask().then(function(projects) {
 
     Queries.getAll().then(function(projects) {
-      res.redirect('/')
+      res.redirect('/lyst')
     })
   })
 
@@ -92,7 +92,7 @@ router.post('/update-input', function(req, res, next) {
 
     Queries.getAll().then(function(projects) {
       res.send( '/home' )
-      res.redirect('/')
+      res.redirect('/lyst')
     })
   })
 
@@ -105,18 +105,18 @@ router.get('/login', function(req, res, next) {
 router.post('/login', passport.authenticate('local'), function(req, res, next) {
   var user = req.user;
   console.log('user: ',user)
-      res.redirect('/')
+      res.redirect('/lyst')
 })
 
 router.get('/signup', function(req, res, next) {
       res.render('signup.pug')
 })
 
-router.get('/home', function(req, res, next) {
+router.get('/', function(req, res, next) {
       res.render('home.pug')
 })
 
-// router.get('/', function(req, res, next) {
+// router.get('/lyst', function(req, res, next) {
 //       res.render('index.pug')
 // })
 
