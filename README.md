@@ -27,7 +27,7 @@ To run the app at any time simply run the following command:
 
  - [x] Users can edit the text on existing to do list items.
 
- - [ ] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
+ - [x] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
 
  - [ ] When an error occurs, the user is notified with modal message.*
 
