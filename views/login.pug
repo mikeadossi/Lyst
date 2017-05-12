@@ -3,10 +3,16 @@ extends layout
 block content
   .todrop_header
     .todrop_header_left
-      a.home(href='/lyst') Lyst
+      if !isAuthenticated
+        a.home(href='/') Lyst
+      else
+        a.home(href='/lyst') Lyst
     .todrop_header_right
-      a.todrop_login(href='/login') log in
-      a.todrop_sign_up(href='/signup') sign up
+      if !isAuthenticated
+        a.todrop_login(href='/login') log in
+        a.todrop_sign_up(href='/signup') sign up
+      else  
+        a.todrop_sign_up(href='/') log out
   
   form#login_container(method='post')
     .login_header Log In
