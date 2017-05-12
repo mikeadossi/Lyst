@@ -8,6 +8,12 @@ DROP TABLE IF EXISTS todos;
     isComplete BOOLEAN DEFAULT FALSE
   );
 
+  CREATE TABLE user (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(40),
+    password VARCHAR(20)
+  )
+
 INSERT INTO todos (id,task,isComplete) VALUES (1, 'it works!', true);
 INSERT INTO todos (id,task,isComplete) VALUES (2, 'here is the next tag!', true);
 INSERT INTO todos (id,task,isComplete) VALUES (3, 'and lastly!', true);
