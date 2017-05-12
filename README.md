@@ -17,6 +17,14 @@ To run the app at any time simply run the following command:
   $ npm start
 ```
 
+## Run Tests
+
+To run the tests navigate to the project directory and run the following command
+
+```
+  $ npm test
+```
+
 ## Specifications :
 
  - [x] Users can create to do list items.
