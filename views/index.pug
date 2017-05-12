@@ -34,11 +34,11 @@ block content
             input.task_input(type='text', name='item', value='', placeholder=todos.task, id=todos.id)
             input.task_time(placeholder='12:00')
 
-    form.form(action='/insert-task', method='post')
-      input#task_entry_input(type='text', name='user_entry', value='', placeholder='add new task')
-      #submit_btn_container
-        input#delete_btn(type='delete', name='delete_item', value='-', readonly="readonly")
-        input#submit_btn(type='submit', name='add_item', value='+', readonly="readonly")
+  form.form(action='/insert-task', method='post')
+    input#task_entry_input(type='text', name='user_entry', value='', placeholder='add new task')
+    #submit_btn_container
+      input#delete_btn(type='delete', name='delete_item', value='-', readonly="readonly")
+      input#submit_btn(type='submit', name='add_item', value='+', readonly="readonly")
 
     script(src='javascript/main.js')
     //- script(src='../routes/server.js')
