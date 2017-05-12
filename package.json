@@ -2,7 +2,7 @@
   "name": "todrop",
   "version": "1.0.0",
   "description": "a to do list app that gives you freedom",
-  "main": "index.js",
+  "main": "home.pug",
   "scripts": {
     "test": "test",
     "start": "nodemon app",
