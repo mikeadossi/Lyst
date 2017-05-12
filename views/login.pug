@@ -8,9 +8,9 @@ block content
       a.todrop_login(href='/login') log in
       a.todrop_sign_up(href='/signup') sign up
   
-  #login_container
+  form#login_container(method='post')
     .login_header Log In
-    input.username_login_input(type='text' placeholder='enter username')
-    input.password_login_input(type='text' placeholder='enter password')
+    input.username_login_input(name='username' type='text' placeholder='enter username')
+    input.password_login_input(name='password' type='text' placeholder='enter password')
     input.submit_login_info(type='submit' value='submit')
   

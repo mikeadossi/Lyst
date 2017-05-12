@@ -7,6 +7,8 @@ var routes = require("./routes/routes");
 var morgan = require("morgan");
 var app = express();
 var session = require("express-session");
+var passport = require("passport");
+
 
 //view engine setup
 app.set("views", path.join(__dirname, "views/"));
@@ -19,6 +21,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(session({secret: "something there"}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(routes);
 
 //catch 404 and forward to error handler
