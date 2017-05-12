@@ -35,7 +35,7 @@ passport.deserializeUser(function(name, callback){
 
 router.get('/lyst', function(req, res, next) {
   Promise.all([Queries.getAll(), Queries.getCount()]).then(function([projects,tasks]) {
-    res.render("index", {
+    res.render("lyst", {
       projects: projects,
       tasks: tasks,
       isAuthenticated: req.isAuthenticated()
