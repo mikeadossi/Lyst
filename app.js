@@ -6,6 +6,7 @@ var bodyParser = require("body-parser");
 var routes = require("./routes/routes");
 var morgan = require("morgan");
 var app = express();
+var session = require("express-session");
 
 //view engine setup
 app.set("views", path.join(__dirname, "views/"));
@@ -13,10 +14,11 @@ app.set("view engine", "pug");
 
 //
 app.use(morgan('dev')); // send messages to cli
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(session({secret: "something there"}));
 app.use(routes);
 
 //catch 404 and forward to error handler
