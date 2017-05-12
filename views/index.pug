@@ -23,8 +23,8 @@ block content
         .todo_tasks_container
           .task_input_container
             .task_checkbox_container
-              input(type='checkbox', id=todos.id)
-            input.task_input(type='text', name='item', value='', placeholder=todos.task)
+              input(type='checkbox', id=todos.id, checked)
+            input.task_input.task_input_true(type='text', name='item', value='', placeholder=todos.task)
             input.task_time(placeholder='12:00')
       else
         .todo_tasks_container

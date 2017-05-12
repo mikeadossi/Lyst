@@ -22,12 +22,14 @@
 
         fetch( url, options );
 
+
       } else {
         url = "/unchecked"
 
         fetch( url, options );
       }
 
+    location.reload()
     })
 
 
@@ -100,4 +102,8 @@
    var textNode = document.createTextNode(`${dayText}, ${monthText} ${dateText}th`);
    day.replaceChild(textNode, day.childNodes[0])
 
+ //  (function {
+ //   var checked = document.getElementsByClassName('task_input_true');
+ //   checked.style.textDecoration = "line-through"
+ // })();
 })();
