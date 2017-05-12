@@ -9,7 +9,8 @@ block content
       if !isAuthenticated
         a.todrop_login(href='/login') log in
         a.todrop_sign_up(href='/signup') sign up
-
+      else
+        a.todrop_sign_up(href='/') log out
   #todo_container
     .todo_header
       .todo_date_container
