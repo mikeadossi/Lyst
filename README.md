@@ -29,25 +29,25 @@ To run the app at any time simply run the following command:
 
  - [x] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
 
- - [ ] When an error occurs, the user is notified with modal message.*
+ - [x] When an error occurs, the user is notified with modal message.*
 
  - [x] Backend uses Node.js and Express.
 
  - [x] App persists to do list items in a database.
 
- - [ ] Code uses a linter and there are no linting errors.
+ - [x] Code uses a linter and there are no linting errors.
 
- - [ ] There are thorough tests for all functionality involved in interacting with the database.
+ - [x] There are thorough tests for all functionality involved in interacting with the database.
 
-   - [ ] There are tests for creating to do list items.
+   - [x] There are tests for creating to do list items.
 
-   - [ ] There are tests for deleting to do list items.
+   - [x] There are tests for deleting to do list items.
 
-   - [ ] There are tests for completing to do list items.
+   - [x] There are tests for completing to do list items.
 
-   - [ ] There are tests for editing to do list items.
+   - [x] There are tests for editing to do list items.
 
- - [ ] All tests are passing.
+ - [x] All tests are passing.
 
  - [x] Repository includes a README file with basic installation and setup.
 
