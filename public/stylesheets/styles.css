@@ -241,5 +241,6 @@ input:focus {
 
 form{
   max-width: 600px;
+  width:98%;
   margin: auto;
 }

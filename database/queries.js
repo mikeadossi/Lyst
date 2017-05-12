@@ -24,6 +24,9 @@ var Queries = {
   updateInput: function(id,value) {
     return db.none('UPDATE todos SET task = $2 WHERE id = $1', [id,value])
   },
+  getUser: function(name) {
+    return db.any('SELECT * FROM users WHERE username = $1', [name])
+  }
   // newTable: function(name) {
   //   return db.any('DROP TABLE IF EXISTS $1; CREATE TABLE $1 (id SERIAL PRIMARY KEY, task VARCHAR(255) NOT NULL, currentTime TIMESTAMP DEFAULT now(), isComplete BOOLEAN DEFAULT FALSE)', [name])
   // }

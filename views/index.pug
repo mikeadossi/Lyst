@@ -6,8 +6,9 @@ block content
     .todrop_header_left
       a.home(href='/') Lyst
     .todrop_header_right
-      a.todrop_login(href='/login') log in
-      a.todrop_sign_up(href='/signup') sign up
+      if !isAuthenticated
+        a.todrop_login(href='/login') log in
+        a.todrop_sign_up(href='/signup') sign up
 
   #todo_container
     .todo_header
