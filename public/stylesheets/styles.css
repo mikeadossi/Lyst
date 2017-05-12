@@ -83,7 +83,7 @@ a {
 }
 
 #submit_btn:hover, #delete_btn:hover{
-  cursor:pointer; 
+  cursor:pointer;
 }
 
 #submit_btn:active, #delete_btn:active{
@@ -110,6 +110,11 @@ a {
 .task_input{
   width: 74%;
   color:black;
+}
+
+.task_input_true::-webkit-input-placeholder{
+  text-decoration:line-through;
+  color: purple;
 }
 
 #task_entry_input{
