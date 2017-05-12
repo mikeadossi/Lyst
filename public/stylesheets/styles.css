@@ -238,3 +238,8 @@ input:focus {
   cursor:pointer;
   color:#E51C59;
 }
+
+form{
+  max-width: 600px;
+  margin: auto;
+}
