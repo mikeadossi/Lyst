@@ -1,6 +1,6 @@
 # Lyst
 
-<img src="public/images/lystScreenshot.png" height="600px"/>
+<img src="public/images/lystScreenshot.png" height="400px"/>
 
 A to do list that gives you that freedom you always wanted.
 
