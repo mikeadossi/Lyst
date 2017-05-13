@@ -17,6 +17,10 @@ To run the app at any time simply run the following command:
   $ npm start
 ```
 
+## in order to sign in you will need the following username and password:
+username: jared
+Password: 100completeness
+
 ## Run Tests
 
 To run the tests navigate to the project directory and run the following command
