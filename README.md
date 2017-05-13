@@ -1,5 +1,7 @@
 # Lyst
 
+<img src="public/images/lystScreenshot.png" height="600px"/>
+
 A to do list that gives you that freedom you always wanted.
 
 ## Installation
